@@ -1,0 +1,18 @@
+.portfolio-project {
+    &__details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+}

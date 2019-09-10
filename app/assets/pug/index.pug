@@ -1,0 +1,101 @@
+doctype
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Shamella
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel='stylesheet', href='temp/styles/styles.css')
+
+  body
+    // HEADER 
+    header.hero
+      include partials/primary-nav.pug
+      .hero-content.white-text
+        h1.hero-content__heading I Do Graphic Design
+        h4.hero-content__author Mahmoud El Helou
+
+    // PROJECTS 
+    section.page-section.portfolio-project
+      .container
+        .row
+          .col.m6.hide-on-small-only
+            .portfolio-project__details-container
+              h3.portfolio-project__title Diligord
+              p.portfolio-project__description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut est similique aut officia unde ratione a impedit sunt numquam
+
+          .col.m6
+            .card
+              .card-image
+                img(src="./assets/images/projects--abstract-1.jpg" alt="Abstract project about nature")
+                span.card-title Diligord
+                a(href="#abstract1" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger")
+                  i.material-icons add
+
+              .card-content
+                p
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+
+        .row
+          .col.m6
+            .card
+              .card-image
+                img(src="./assets/images/projects--abstract-1.jpg" alt="Abstract project about nature")
+                span.card-title Diligord
+                a(href="#abstract2" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger")
+                  i.material-icons add
+
+              .card-content
+                p
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star_half
+
+          .col.m6.hide-on-small-only
+            .portfolio-project__details-container
+              h3.portfolio-project__title Aleressa
+              p.portfolio-project__description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut est similique aut officia unde ratione a impedit sunt numquam
+
+        .row
+          .col.m6.hide-on-small-only
+            .portfolio-project__details-container
+              h3.portfolio-project__title Recogged
+              p.portfolio-project__description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut est similique aut officia unde ratione a impedit sunt numquam
+
+          .col.m6
+            .card
+              .card-image
+                img(src="./assets/images/projects--abstract-1.jpg" alt="Abstract project about nature")
+                span.card-title Diligord
+                a(href="#abstract3" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger")
+                  i.material-icons add
+
+              .card-content
+                p
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star
+                  i.material-icons star_border
+
+    include partials/footer.pug
+
+    // Modal 1
+    #abstract1.modal
+      .modal-content
+        h4 Dilligord
+        img(src="./assets/images/projects--abstract-1.jpg")
+      .modal-footer
+        p
+          i.material-icons star
+          i.material-icons star
+          i.material-icons star
+          i.material-icons star
+          i.material-icons star_border
+    script(src='./temp/scripts/App.js')

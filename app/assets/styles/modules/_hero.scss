@@ -1,0 +1,18 @@
+.hero {
+    background: $hero-bg-image;
+    height: $hero-height;
+    position: relative;
+
+    &-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__author {
+            font-weight: 300;
+            opacity: .65;
+            letter-spacing: .4em;
+        }
+    }
+}
