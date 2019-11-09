@@ -19,37 +19,38 @@ const browserSync = require("browser-sync").create();
 function html() {
   return gulp
     .src("./app/assets/pug/index.pug")
-    .pipe(pug())
-    .pipe(
-      beautifyHtml({
-        indent_size: 4,
-        indent_char: " ",
-        unformatted: ["code", "pre", "em", "strong", "span", "i", "b", "br"]
-      })
-    )
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest("./app"));
 }
 
 function styles() {
   return (
     gulp
-      .src("./app/assets/styles/styles.scss")
-      // .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: "expanded" }))
-      .on("error", sass.logError)
-      .pipe(autoprefixer("last 2 versions"))
-      // .pipe(minifyCSS())
-      // .pipe(sourcemaps.write())
-      .pipe(gulp.dest("./app/temp/styles"))
-      .pipe(browserSync.stream())
+    .src("./app/assets/styles/styles.scss")
+    // .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: "expanded"
+    }))
+    .on("error", sass.logError)
+    .pipe(autoprefixer("last 2 versions"))
+    // .pipe(minifyCSS())
+    // .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./app/temp/styles"))
+    .pipe(browserSync.stream())
   );
 }
 
 function scripts() {
   return gulp
-    .src("./app/assets/scripts/**/*.js", { sourcemaps: false })
+    .src("./app/assets/scripts/**/*.js", {
+      sourcemaps: false
+    })
     .pipe(concat("App.js"))
-    .pipe(gulp.dest("./app/temp/scripts", { sourcemaps: false }));
+    .pipe(gulp.dest("./app/temp/scripts", {
+      sourcemaps: false
+    }));
 }
 
 function watch() {

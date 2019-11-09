@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamella</title>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="temp/styles/styles.css" />
+
+    <style>
+      .primary-nav .nav-wrapper {
+        background: #00796b;
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 80px;
+        line-height: 80px;
+      }
+
+      .primary-nav .nav-wrapper i {
+        font-size: 32px;
+        line-height: 80px;
+      }
+
+      .primary-nav__link {
+        font-size: 1.125rem;
+      }
+
+      .side-nav li > a {
+        font-size: 1.125rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="navbar-fixed primary-nav">
+      <nav>
+        <div class="nav-wrapper z-depth-2">
+          <a
+            class="button-collapse show-on-large"
+            href="#"
+            data-activates="mobile-nav"
+            ><i class="material-icons">menu</i></a
+          ><a class="brand-logo" href="index.html">Shamella</a>
+          <ul class="right hide-on-med-and-down">
+            <li class="active">
+              <a class="primary-nav__link" href="index.html">Abstract</a>
+            </li>
+            <li><a class="primary-nav__link" href="logo.html">Logos</a></li>
+            <li>
+              <a class="primary-nav__link" href="gaming.html">Gaming</a>
+            </li>
+          </ul>
+          <div data-role="page" id="page1">
+            <ul class="side-nav" id="mobile-nav">
+              <li class="active">
+                <a class="side-nav__link" href="#page2" data-transition="slide"
+                  >Abstract</a
+                >
+              </li>
+              <li><a class="side-nav__link" href="logo.html">Logos</a></li>
+              <li><a class="side-nav__link" href="gaming.html">Gaming</a></li>
+            </ul>
+          </div>
+
+          <div data-role="page" id="page2">
+            <ul class="side-nav" id="mobile-nav">
+              <li>
+                <a class="side-nav__link" href="#page1" data-transition="slide"
+                  >Abstract</a
+                >
+              </li>
+              <li><a class="side-nav__link" href="logo.html">Logos</a></li>
+              <li><a class="side-nav__link" href="gaming.html">Gaming</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script src="./temp/scripts/App.js"></script>
+  </body>
+</html>

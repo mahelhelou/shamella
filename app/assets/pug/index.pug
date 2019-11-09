@@ -35,9 +35,13 @@ html(lang='en')
               .card-content
                 p
                   i.material-icons star
+                  |
                   i.material-icons star
+                  |
                   i.material-icons star
+                  |
                   i.material-icons star
+                  |
                   i.material-icons star
 
         .row
@@ -84,18 +88,8 @@ html(lang='en')
                   i.material-icons star
                   i.material-icons star_border
 
+
     include partials/footer.pug
 
-    // Modal 1
-    #abstract1.modal
-      .modal-content
-        h4 Dilligord
-        img(src="./assets/images/projects--abstract-1.jpg")
-      .modal-footer
-        p
-          i.material-icons star
-          i.material-icons star
-          i.material-icons star
-          i.material-icons star
-          i.material-icons star_border
+    include partials/modal.pug
     script(src='./temp/scripts/App.js')
